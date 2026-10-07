@@ -9,6 +9,7 @@ import {
   Tag, BarChart2, CheckCircle, Info, User, Mail, Award,
 } from 'lucide-react';
 import { useCartStore } from '../../stores/cartStore';
+import API_BASE_URL from '../../config/api';
 
 // ─── Firestore ───────────────────────────────────────────────────────────────
 import {
@@ -19,7 +20,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from '../../services/firebase';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
-const API_BASE   = `${(import.meta.env.VITE_API_URL_RAILWAY && import.meta.env.VITE_API_URL_RAILWAY !== 'undefined' ? import.meta.env.VITE_API_URL_RAILWAY : 'http://localhost:5000')}/api`;
 const STAR_LABEL = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
 
 function formatDate(iso) {

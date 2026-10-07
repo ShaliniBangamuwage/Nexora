@@ -4,9 +4,17 @@
 const getBaseUrl = () => {
   const railway = import.meta.env.VITE_API_URL_RAILWAY;
   const local = import.meta.env.VITE_API_URL;
-  if (railway && railway !== 'undefined') return railway;
-  if (local && local !== 'undefined') return local;
-  return 'http://localhost:5000';
+  const configuredUrls = [railway, local].filter(
+    (value) => value && value !== 'undefined',
+  );
+  const usableUrl = configuredUrls.find(
+    (value) =>
+      !import.meta.env.PROD ||
+      !/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/i.test(value),
+  );
+
+  if (usableUrl) return usableUrl;
+  return import.meta.env.PROD ? 'https://nexora-d0en.onrender.com' : 'http://localhost:5000';
 };
 
 const API_BASE_URL = `${getBaseUrl()}/api`;

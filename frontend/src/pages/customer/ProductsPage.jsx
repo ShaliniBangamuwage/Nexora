@@ -5,8 +5,7 @@ import ProductCard from '../../components/products/ProductCard';
 import { C, FONT } from '../../components/profile/profileTheme';
 import { Tag } from 'lucide-react';
 import { CATEGORIES } from '../../data/categories';
-
-const API_BASE = `${(import.meta.env.VITE_API_URL_RAILWAY && import.meta.env.VITE_API_URL_RAILWAY !== 'undefined' ? import.meta.env.VITE_API_URL_RAILWAY : 'http://localhost:5000')}/api`;
+import API_BASE_URL from '../../config/api';
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(() => new URLSearchParams(window.location.search).get('category') || 'all');
@@ -23,8 +22,8 @@ export default function ProductsPage() {
     setError(null);
     try {
       const [res, categoryResponse] = await Promise.all([
-        fetch(`${API_BASE}/products`),
-        fetch(`${API_BASE}/products/categories`),
+        fetch(`${API_BASE_URL}/products`),
+        fetch(`${API_BASE_URL}/products/categories`),
       ]);
       if (!res.ok) throw new Error(`Catalog request failed (${res.status})`);
       const data = await res.json();
