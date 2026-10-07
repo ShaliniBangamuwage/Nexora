@@ -1,0 +1,21 @@
+# Local environment and credentials
+**/.env
+**/.env.*
+!**/.env.example
+**/serviceAccountKey.json
+**/*serviceAccount*.json
+**/*service-account*.json
+**/firebase-adminsdk*.json
+**/*firebase-admin*.json
+**/*firebase*admin*.json
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.pk8
+
+# Dependencies and generated output
+**/node_modules/
+**/dist/
+**/coverage/
+**/uploads/
