@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme */
+  --bg-primary: #f5f8ff;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f2a5e;
+  --text-secondary: #64748b;
+  --navbar-bg: #ffffff;
+  --navbar-border: rgba(26, 135, 225, 0.15);
+  --card-bg: #ffffff;
+  --card-border: rgba(26, 135, 225, 0.18);
+  --accent-blue: #1a87e1;
+  --accent-blue-soft: rgba(26, 135, 225, 0.06);
+}
+
+.dark {
+  /* Dark Theme */
+  --bg-primary: #0b1120;
+  --bg-secondary: #0f172a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --navbar-bg: #0f172a;
+  --navbar-border: rgba(30, 41, 59, 0.5);
+  --card-bg: #1e293b;
+  --card-border: rgba(51, 65, 85, 0.5);
+  --accent-blue: #38bdf8;
+  --accent-blue-soft: rgba(56, 189, 248, 0.1);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body,
+html.dark #root {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-gray-50 {
+  background-color: #111c2f !important;
+}
+
+html.dark .bg-slate-100,
+html.dark .bg-gray-100 {
+  background-color: #172338 !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-gray-900,
+html.dark .text-blue-900 {
+  color: var(--text-primary) !important;
+}
+
+html.dark .text-slate-800,
+html.dark .text-slate-700,
+html.dark .text-gray-800,
+html.dark .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-gray-100,
+html.dark .border-gray-200 {
+  border-color: var(--card-border) !important;
+}
+
+html.dark .product-detail-container .card-shadow {
+  background-color: var(--bg-secondary) !important;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Smooth transition for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}

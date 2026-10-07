@@ -1,0 +1,48 @@
+export const C = {
+  bg:             "var(--bg-primary)",
+  surface:        "var(--bg-secondary)",
+  border:         "var(--navbar-border)",
+  accent:         "var(--accent-blue)",
+  accentDark:     "var(--accent-blue)",
+  accentMid:      "#0284c7",
+  accentFaint:    "var(--accent-blue-soft)",
+  accentShadow:   "0 4px 12px rgba(26,135,225,0.25)",
+  disabled:       "#e2e8f0",
+  textPrimary:    "var(--text-primary)",
+  textMuted:      "var(--text-secondary)",
+  textSoft:       "var(--text-secondary)",
+  successBg:      "rgba(22,163,74,0.08)",
+  successBorder:  "rgba(22,163,74,0.25)",
+  successText:    "#22c55e",
+  gold:           "#d97706",
+  goldLight:      "#f59e0b",
+  goldGradient:   "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+  goldShadow:     "rgba(217,119,6,0.3)",
+  bannerGradient: "linear-gradient(135deg, #0f2a5e 0%, #1a87e1 100%)",
+  bannerSubtitle: "rgba(255,255,255,0.75)",
+  btnShadow:      "0 4px 12px rgba(0,0,0,0.15)",
+  bannerBtnBg:    "rgba(255,255,255,0.12)",
+  bannerBtnBorder:"rgba(255,255,255,0.3)",
+  cardShadow:     "0 1px 4px rgba(26,135,225,0.07)",
+  dangerBg:       "rgba(220,38,38,0.06)",
+  dangerText:     "#ef4444",
+  dangerBorder:   "rgba(220,38,38,0.22)",
+};
+
+export const FONT = {
+  display: "'Playfair Display', serif",
+  body:    "'DM Sans', sans-serif",
+};
+
+export const inputStyle = {
+  width:        "100%",
+  padding:      "10px 14px",
+  border:       `1px solid rgba(26,135,225,0.18)`,
+  borderRadius: 10,
+  fontSize:     13,
+  color:        "var(--text-primary)",
+  fontFamily:   "'DM Sans', sans-serif",
+  background:   "var(--bg-secondary)",
+  outline:      "none",
+  boxSizing:    "border-box",
+};
