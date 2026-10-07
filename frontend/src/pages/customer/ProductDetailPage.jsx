@@ -92,7 +92,7 @@ export default function ProductDetailPage() {
   const fetchProduct = useCallback(async () => {
     setError(null);
     try {
-      const res  = await fetch(`${API_BASE}/products/${id}`);
+      const res  = await fetch(`${API_BASE_URL}/products/${id}`);
       if (!res.ok) throw new Error('Product is unavailable');
       const data = await res.json();
       if (!data) throw new Error('Product is unavailable');
